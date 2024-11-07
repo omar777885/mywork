@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(52, 58, 64, 0.8); /* Slightly transparent background */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Main content styling */
+#news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.news-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% / 4 - 40px); /* Adjust width as needed */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.news-item h2 {
+    font-size: 1.25rem;
+    color: #007bff; /* Primary color */
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #555; /* Slightly darker text color */
+    margin-bottom: 10px;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #888; /* Muted text color */
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Success color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.news-item a:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 1200px) {
+    .news-item {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        width: 100%;
+    }
+}
