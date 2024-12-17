@@ -1,210 +1,89 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Header and Footer Design</title>
-    <!-- Google Font: Cairo -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding-top: 80px; /* Space for the fixed header */
-        }
-
-        /* Hero section to test header scrolling */
-        .hero {
-            height: 100vh;
-            background: url('images/hero.png') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 3rem;
-        }
-
-        /* Header styling */
-        header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            padding: 20px 50px;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: transparent;
-            color: #011107;
-        }
-
-        /* Solid background on scroll */
-        header.scrolled {
-            background-color: #9fea84;
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            max-width: 100px; /* Adjust the size of your logo */
-            margin-right: 10px; /* Space between the logo and the brand name */
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: inherit;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #007BFF;
-        }
-
-        /* Mobile responsiveness */
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: inherit;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 15px;
-                background-color: #fff;
-                position: absolute;
-                top: 100%;
-                right: 50px;
-                width: 200px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                padding: 15px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #222;
-            color: #9fea84;
-            padding: 40px 0;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            margin: 20px;
-        }
-
-        .footer-column h4 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: #fff;
-        }
-
-        .social-media a {
-            color: #aaa;
-            font-size: 18px;
-            margin-right: 15px;
-            transition: color 0.3s;
-        }
-
-        .social-media a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #aaa;
-        }
-    </style>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>universal</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
-<body>
+<!-- body -->
+
+<body class="main-layout ">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/logo.png" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
     <header>
-        <div class="logo">
-            <div class="logo-text">يونيفرسال الصناعية</div> <!-- Arabic brand name -->
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="products.html">products</a></li>
-            <li><a href="news.html">news</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <!-- header inner -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Custom Header</title>
+            <link rel="stylesheet" href="header.css"> <!-- Link to your CSS file -->
+        </head>
+        <body>
+            <header class="site-header">
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="contact-info">
+                            <a href="tel:+97444096666"><i class="fas fa-phone-alt"></i> +974 4409 6666</a>
+                            <a href="mailto:info@qafco.qa"><i class="fas fa-envelope"></i> info@qafco.qa</a>
+                        </div>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="Universal"></a>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="sustainability.html">Sustainability</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </body>
+        </html>
+        
+            
+        <!-- end header inner -->
     </header>
     <!-- end header -->
     <section class="slider_section">
@@ -766,7 +645,7 @@
      
         <div class="copyright">
             <div class="container">
-                <p>© 2024 All Rights Reserved.@omar mohammed</p>
+                <p>© 2024 All Rights Reserved. designed by Omar</p>
            
         </div>
         </div>
