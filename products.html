@@ -4,7 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="sami.css"> <!-- Link to your CSS file -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #04691c;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #cce7d0;
+        }
+
+        #products-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .product-item {
+    background: linear-gradient(135deg, #e8f5e9, #9bef9e); /* Soft green gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem;
+    padding: 1.5rem;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .product-item h2 {
+            color: #28a745;
+            font-size: 1.8rem;
+            margin: 1rem 0;
+        }
+
+        .product-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 1.5rem;
+            color: #666;
+        }
+
+        /* Packaging Images */
+        .packaging-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .packaging-option {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .packaging-option img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .packaging-option:hover {
+            border-color: #53e374;
+        }
+
+        .product-item a {
+            display: block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #244b2d;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .product-item a:hover {
+            color: #246131;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        .inquire-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #edf2ee;
+    color: #0c0b0b;
+    text-decoration: none;
+    border-radius: 25px; /* More rounded edges */
+    font-weight: bold;
+    font-size: 1rem; /* Increased font size for better readability */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for background and shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Larger shadow for a modern look */
+}
+
+.inquire-button:hover {
+    background-color: #3b863b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -21,102 +201,314 @@
     <div id="products-list">
         <!-- Product 1 -->
         <div class="product-item">
-            <img src="images/product1.jpg" alt="Product 1">
+            <img src="images/npk 6.6.40.jpg" alt="Product 1">
             <h2>N.P.K(6,6,40)</h2>
-            <p>Fully water-soluble high potassium fertilizer produced from high quality materials, easily absorbed by plants promoting roots and leaves growth. Promotes high concentration of sugars in cells making fruits sweeter and crucial for high yielding crops. Provide plants with essential nutrients for plant health and growth. High potassium fertilizer enhances plant's ability to absorb nitrogen from the ground and produce proteins and enhance crop yields. Increases root growth and improve drought resistance. Recommended when soil levels or tissue samples show low potassium levels or during setting buds, maturation and blooming. Increase the validity of fruits and increase its storage ability. Used to improve quality of fruits (size-TSS-color) for improved export features.</p>
+            <p>Fully water-soluble high potassium fertilizer promoting plant growth and sweetness of fruits.</p>
+            <div class="packaging-options">
+                <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+                    <img src="images/box (1).jpg" alt="Box">
+                </div>
+                <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+                    <img src="images/box (2).jpg" alt="Bag">
+                </div>
+                <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+                    <img src="images/box (4).jpg" alt="Bottle">
+                </div>
+            </div>
             <a href="datasheets/6 6 40 NPK ui.pdf" download>Download Datasheet</a>
+            <a href="mailto:ommo1122334455@gmail.com?subject=Inquiry%20about%20N.P.K(6,6,40)" target="_blank" rel="noopener noreferrer" class="inquire-button">Inquire Now</a>
+
         </div>
+        
         <!-- Product 2 -->
         <div class="product-item">
-            <img src="images/product2.png" alt="Product 2">
+            <img src="images/npk 19.19.19.jpg" alt="Product 2">
             <h2>N.P.K(19,19,19)</h2>
-            <p>A completely water-soluble balanced fertilizer produced from high quality materials, it contains major fertilizer elements to promote the growth of roots and leaves. -Provides the plant with phosphorous, nitrogen and potassium elements, which have an important cole in completing the vital processes inside the plant. - compensates the deficiency of the main nutrients, improves branching and flowering, and increases productivity. - Ensures time maturity. - Suitable for al of plant growth stages and enhance disease resistance. - Activates the vital processes inside the plant and increases the efficiency of nodes and flowering. - Increases the plant's ability to resist frost, drought and soil salinity</p>
+            <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+            <div class="packaging-options">
+                <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+                    <img src="images/box (1).jpg" alt="Box">
+                </div>
+                <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+                    <img src="images/box (2).jpg" alt="Bag">
+                </div>
+                <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+                    <img src="images/box (4).jpg" alt="Bottle">
+                </div>
+            </div>
             <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+            <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
         </div>
-        <!-- Product 3 -->
-        <div class="product-item">
-            <img src="images/product3.jpg" alt="Product 3">
-            <h2>Product 3</h2>
-            <p>Description of Product 3.</p>
-            <a href="datasheets/product3.pdf" download>Download Datasheet</a>
+       <div class="product-item">
+        <img src="images/npk 20.20.20.jpg" alt="Product 2">
+        <h2>N.P.K(20,20,20)</h2>
+        <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+        <div class="packaging-options">
+            <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+                <img src="images/box (1).jpg" alt="Box">
+            </div>
+            <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+                <img src="images/box (2).jpg" alt="Bag">
+            </div>
+            <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+                <img src="images/box (4).jpg" alt="Bottle">
+            </div>
         </div>
-        <!-- Product 4 -->
-        <div class="product-item">
-            <img src="images/product4.jpg" alt="Product 4">
-            <h2>Product 4</h2>
-            <p>Description of Product 4.</p>
-            <a href="datasheets/product4.pdf" download>Download Datasheet</a>
+        <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+        <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+       </div>
+<div class="product-item">
+    <img src="images/npk15.15.15.jpg" alt="Product 2">
+    <h2>N.P.K(15,15,15)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
         </div>
-        <!-- Product 5 -->
-        <div class="product-item">
-            <img src="images/product5.jpg" alt="Product 5">
-            <h2>Product 5</h2>
-            <p>Description of Product 5.</p>
-            <a href="datasheets/product5.pdf" download>Download Datasheet</a>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
         </div>
-        <!-- Product 6 -->
-        <div class="product-item">
-            <img src="images/product6.jpg" alt="Product 6">
-            <h2>Product 6</h2>
-            <p>Description of Product 6.</p>
-            <a href="datasheets/product6.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 7 -->
-        <div class="product-item">
-            <img src="images/product7.jpg" alt="Product 7">
-            <h2>Product 7</h2>
-            <p>Description of Product 7.</p>
-            <a href="datasheets/product7.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 8 -->
-        <div class="product-item">
-            <img src="images/product8.png" alt="Product 8">
-            <h2>Product 8</h2>
-            <p>Description of Product 8.</p>
-            <a href="datasheets/product8.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 9 -->
-        <div class="product-item">
-            <img src="images/product9.jpg" alt="Product 9">
-            <h2>Product 9</h2>
-            <p>Description of Product 9.</p>
-            <a href="datasheets/product9.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 10 -->
-        <div class="product-item">
-            <img src="images/product10.jpg" alt="Product 10">
-            <h2>Product 10</h2>
-            <p>Description of Product 10.</p>
-            <a href="datasheets/product10.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 11 -->
-        <div class="product-item">
-            <img src="images/product11.jpg" alt="Product 11">
-            <h2>Product 11</h2>
-            <p>Description of Product 11.</p>
-            <a href="datasheets/product11.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 12 -->
-        <div class="product-item">
-            <img src="images/product12.jpg" alt="Product 12">
-            <h2>Product 12</h2>
-            <p>Description of Product 12.</p>
-            <a href="datasheets/product12.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 13 -->
-        <div class="product-item">
-            <img src="images/product13.jpg" alt="Product 13">
-            <h2>Product 13</h2>
-            <p>Description of Product 13.</p>
-            <a href="datasheets/product13.pdf" download>Download Datasheet</a>
-        </div>
-        <!-- Product 14 -->
-        <div class="product-item">
-            <img src="images/product14.jpg" alt="Product 14">
-            <h2>Product 14</h2>
-            <p>Description of Product 14.</p>
-            <a href="datasheets/product14.pdf" download>Download Datasheet</a>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
         </div>
     </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk23.10.5.jpg" alt="Product 2">
+    <h2>N.P.K(23,10,5)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk12.50.12.jpg" alt="Product 2">
+    <h2>N.P.K(12,50,12)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 10.50.10.jpg" alt="Product 2">
+    <h2>N.P.K(10,50,10)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk12.36.12.jpg" alt="Product 2">
+    <h2>N.P.K(12,36,12)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk5.5.45.jpg" alt="Product 2">
+    <h2>N.P.K(5,5,45)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk6.6.43.jpg" alt="Product 2">
+    <h2>N.P.K(6,6,43)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 18.6.26.jpg" alt="Product 2">
+    <h2>N.P.K(18,6,26)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 0.0.40.jpg" alt="Product 2">
+    <h2>N.P.K(0,0,40)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 5.0.45.jpg" alt="Product 2">
+    <h2>N.P.K(5,0,45)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 0.0.32.jpg" alt="Product 2">
+    <h2>N.P.K(32,0,0)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+<div class="product-item">
+    <img src="images/npk 0.0.50.jpg" alt="Product 2">
+    <h2>N.P.K(0,0,50)</h2>
+    <p>A balanced fertilizer providing essential nutrients for healthy plant growth and high yield.</p>
+    <div class="packaging-options">
+        <div class="packaging-option" onclick="openModal('images/box (1).jpg')">
+            <img src="images/box (1).jpg" alt="Box">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (2).jpg')">
+            <img src="images/box (2).jpg" alt="Bag">
+        </div>
+        <div class="packaging-option" onclick="openModal('images/box (4).jpg')">
+            <img src="images/box (4).jpg" alt="Bottle">
+        </div>
+    </div>
+    <a href="datasheets/19 19 19 NPK ui.pdf" download>Download Datasheet</a>
+    <a href="mailto:sales@example.com?subject=Inquiry%20about%20N.P.K(6,6,40)" class="inquire-button">Inquire Now</a>
+
+</div>
+
+</div>
+
+
+    <!-- Modal for Enlarged View -->
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged Packaging">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
