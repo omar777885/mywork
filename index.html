@@ -800,207 +800,209 @@ body {
         </div>
       </div>
     <!-- end clients -->
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>News Section</title>
-    
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
-    
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Ubuntu:400,700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    
-        <!-- START NEWS SECTION -->
-        <style>* {
+   <!DOCTYPE html>
+<html>
+<head>
+    <title>News Section</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Ubuntu:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- START NEWS SECTION -->
+    <style>
+        * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
-        
+
         body {
             color: #66696e;
             font-family: "Poppins", sans-serif;
         }
-        
-        a,
-        a:hover {
+
+        a, a:hover {
             text-decoration: none;
             color: inherit;
         }
-        
+
         .section-news {
             padding: 80px 0;
+            text-align: center; /* Center the content */
         }
-        
+
         .section-news .header-section {
             margin-bottom: 8px;
         }
-        
+
         .section-news .header-section .small-title {
             position: relative;
             text-transform: uppercase;
-          color: #333856;
-          font-size: 20px;
-          font-family: "Ubuntu", sans-serif;
+            color: #333856;
+            font-size: 20px;
+            font-family: "Ubuntu", sans-serif;
         }
-        
+
         .section-news .header-section .small-title span {
             display: inline-block;
             height: 2px;
             width: 20px;
             background-color: #fe2782;
             margin-right: 12px;
-          transform: translateY(-6px);
+            transform: translateY(-6px);
         }
-        
+
         .section-news .header-section .title {
             text-transform: uppercase;
-          font-weight: 700;
-          color: #333856;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 50px;
+            font-weight: 700;
+            color: #333856;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 50px;
         }
-        
+
         .section-news .single-news {
             margin-top: 30px;
-            box-shadow: 0 8px 15px 0 rgba(0,0,0,.15);
+            box-shadow: 0 8px 15px 0 rgba(0, 0, 0, .15);
+            display: inline-block; /* Center the card */
+            width: 100%;
+            max-width: 500px;
         }
-        
+
         .section-news .single-news img {
             width: 100%;
         }
-        
+
         .section-news .single-news .content {
             padding: 35px;
         }
-        
+
         .section-news .single-news .date {
-          display: inline-block;
-          margin-bottom: 15px;
-          background-color: #000;
-          color: #fff;
-          font-weight: 700;
-          font-size: 15px;
-          padding: 7px 25px;
+            display: inline-block;
+            margin-bottom: 15px;
+            background-color: #000;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 7px 25px;
         }
-        
+
         .section-news .single-news .title {
             margin-bottom: 12px;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 29px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 29px;
         }
-        
+
         .section-news .single-news .title a {
-          text-decoration: none;
-          color: #353857;
+            text-decoration: none;
+            color: #353857;
         }
-        
+
         .section-news .single-news .text {
             font-size: 18px;
         }
-        
+
         .section-news .single-news .author {
             margin-right: 28px;
         }
-        
+
         .section-news .single-news .author,
         .section-news .single-news .comments {
             text-transform: uppercase;
-          font-weight: 600;
-          color: #000;
-          font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            font-size: 18px;
         }
-        
+
         @media (max-width: 575.99px) {
             .section-news .header-section .small-title {
                 font-size: 18px;
             }
-        
+
             .section-news .header-section .small-title span {
                 transform: translateY(-5px);
             }
-        
+
             .section-news .header-section .title {
                 font-size: 32px;
             }
         }
-        
+
         @media (min-width: 576px) and (max-width: 767.99px) {
             .section-news .header-section .small-title {
                 font-size: 18px;
             }
-        
+
             .section-news .header-section .small-title span {
                 transform: translateY(-5px);
             }
-        
+
             .section-news .header-section .title {
                 font-size: 32px;
             }
         }
-        
+
         @media (min-width: 768px) and (max-width: 991.99px) {
             .section-news .header-section .title {
                 font-size: 40px;
             }
-        
+
             .section-news .single-news .content {
                 padding: 25px;
             }
-        
+
             .section-news .single-news .title {
                 font-size: 22px;
             }
-        
+
             .section-news .single-news .text {
                 font-size: 16px;
             }
-        
+
             .section-news .single-news .author,
             .section-news .single-news .comments {
                 font-size: 14px;
             }
-        
+
             .section-news .single-news .author {
                 margin-right: 15px;
             }
-        }</style>
-        <section class="section-news">
-            <div class="container">
-                <div class="header-section">
-                    <h3 class="small-title"><span></span>Recent News</h3>
-                    <h2 class="title">News & Articles</h2>
-                </div>
-                <div class="row">
-                    <!-- start single news -->
-                    <div class="col-12 col-md-6">
-                        <div class="single-news">
-                            <a href="#"><img src="images/Saudi-Arabia.jpg" alt=""></a>
-                            <div class="content">
-                                <span class="date">26 DEC 2024</span>
-                                <h3 class="title"><a href="#">we are happy to announce our presence in saudi arabia</a></h3>
-                                <p class="text">We are thrilled to announce  Universal Industrial's expansion into Saudi Arabia! As a leading provider of fertilizers and agrochemicals, we are excited to bring our high-quality products and expertise to the Saudi market2. This expansion aligns with our commitment to supporting sustainable agricultural practices and enhancing crop productivity in the region.
+        }
+    </style>
+    <section class="section-news">
+        <div class="container">
+            <div class="header-section">
+                <h3 class="small-title"><span></span>Recent News</h3>
+                <h2 class="title">News & Articles</h2>
+            </div>
+            <div class="row justify-content-center">
+                <!-- start single news -->
+                <div class="col-12 col-md-6">
+                    <div class="single-news">
+                        <a href="#"><img src="images/Saudi-Arabia.jpg" alt=""></a>
+                        <div class="content">
+                            <span class="date">26 DEC 2024</span>
+                            <h3 class="title"><a href="#">we are happy to announce our presence in saudi arabia</a></h3>
+                            <p class="text">We are thrilled to announce Universal Industrial's expansion into Saudi Arabia! As a leading provider of fertilizers and agrochemicals, we are excited to bring our high-quality products and expertise to the Saudi market2. This expansion aligns with our commitment to supporting sustainable agricultural practices and enhancing crop productivity in the region.
 
 Saudi Arabia's growing agricultural sector presents a significant opportunity for us to contribute to the country's food security and agricultural development. Our comprehensive range of fertilizers and agrochemicals is designed to meet the diverse needs of Saudi farmers, ensuring optimal crop yields and improved soil health.
 
 We look forward to building strong partnerships with local farmers and agricultural businesses, and to playing a key role in the advancement of Saudi Arabia's agricultural industry.
 
 For more information, please visit our website or contact our Saudi office. </p>
-                            </div>
                         </div>
                     </div>
-                    <!-- / end single news -->
-                  
-                    <!-- / end single news -->
                 </div>
+                <!-- / end single news -->
             </div>
-        </section>
-    
-        <!-- / END NEWS SECTION -->
-    </body>
-    </html>
+        </div>
+    </section>
+
+    <!-- / END NEWS SECTION -->
+</body>
+</html>
+
     
   
     <!-- end clients -->
