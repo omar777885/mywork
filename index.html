@@ -160,48 +160,131 @@
         </section>
     
         <!-- Highlights Section -->
-        <section class="highlights bg-light py-5">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="highlight-box">
-                            <img src="images/1.png" alt="Harvesta" class="mb-3">
-                            <h3>Harvesta</h3>
-                            <p class="mb-0">1,996,923</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="highlight-box">
-                            <img src="images/2.png" alt="Units of Cattle" class="mb-3">
-                            <h3>Units of Cattle</h3>
-                            <p class="mb-0">8,000</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="highlight-box">
-                            <img src="images/3.png" alt="Farm" class="mb-3">
-                            <h3>Farm</h3>
-                            <p class="mb-0">60,002</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="highlight-box">
-                            <img src="images/4.png" alt="Units of Technic" class="mb-3">
-                            <h3>Units of Technic</h3>
-                            <p class="mb-0">1,623</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-    </html>
-    
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Section</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .offer-section {
+            width: 85%;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .offer_box {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            padding-bottom: 40px; /* Added padding to make space for the button */
+        }
+
+        .offer_box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer_box h3 {
+            font-size: 24px;
+            color: #343a40;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .offer_box figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        .offer_box img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid #343a40;
+        }
+
+        .offer_box img:hover {
+            transform: scale(1.05);
+        }
+
+        .read-more {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            background: #343a40;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .read-more:hover {
+            background-color: #495057;
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .offer-section {
+                width: 100%;
+            }
+
+            .read-more {
+                width: 80%;
+                font-size: 14px;
+            }
+
+            .offer_box img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offer-section">
+        <div class="offer_box">
+            <h3>Agriculture Products</h3>
+            <figure><img src="images/product1.jpg" alt="Agriculture fertilizers"></figure>
+            <a class="read-more" href="products.html">See More</a>
+        </div>
+    </div>
+</body>
+</html>
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -352,115 +435,573 @@
     
        
     
+       <div class="responsive-container-block outer-container">
+        <style>* {
+            font-family: Nunito, sans-serif;
+          }
+          
+          .text-blk {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            line-height: 25px;
+          }
+          
+          .responsive-cell-block {
+            min-height: 75px;
+          }
+          
+          .responsive-container-block {
+            min-height: 75px;
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            justify-content: space-evenly;
+          }
+          
+          .outer-container {
+            padding-top: 10px;
+            padding-right: 50px;
+            padding-bottom: 10px;
+            padding-left: 50px;
+            background-color: rgb(244, 252, 255);
+          }
+          
+          .inner-container {
+            max-width: 1320px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-left: auto;
+          }
+          
+          .section-head-text {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            margin-left: 0px;
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 48px;
+            color: rgb(0, 135, 177);
+            margin: 0 0 10px 0;
+          }
+          
+          .section-subhead-text {
+            font-size: 25px;
+            color: rgb(153, 153, 153);
+            line-height: 35px;
+            max-width: 470px;
+            text-align: center;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 60px;
+            margin-left: 0px;
+          }
+          
+          .img-wrapper {
+            width: 100%;
+          }
+          
+          .team-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .social-media-links {
+            width: 125px;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .name {
+            font-size: 25px;
+            font-weight: 700;
+            color: rgb(102, 102, 102);
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            margin-left: 0px;
+          }
+          
+          .position {
+            font-size: 25px;
+            font-weight: 700;
+            color: rgb(0, 135, 177);
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 50px;
+            margin-left: 0px;
+          }
+          
+          .team-img {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .team-card-container {
+            width: 280px;
+            margin: 0 0 40px 0;
+          }
+          
+          @media (max-width: 500px) {
+            .outer-container {
+              padding: 10px 20px 10px 20px;
+            }
+          
+            .section-head-text {
+              text-align: center;
+            }
+          }@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wk-desk-1 {
+  width: 8.333333%;
+}
+
+.wk-desk-2 {
+  width: 16.666667%;
+}
+
+.wk-desk-3 {
+  width: 25%;
+}
+
+.wk-desk-4 {
+  width: 33.333333%;
+}
+
+.wk-desk-5 {
+  width: 41.666667%;
+}
+
+.wk-desk-6 {
+  width: 50%;
+}
+
+.wk-desk-7 {
+  width: 58.333333%;
+}
+
+.wk-desk-8 {
+  width: 66.666667%;
+}
+
+.wk-desk-9 {
+  width: 75%;
+}
+
+.wk-desk-10 {
+  width: 83.333333%;
+}
+
+.wk-desk-11 {
+  width: 91.666667%;
+}
+
+.wk-desk-12 {
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .wk-tab-1 {
+    width: 8.333333%;
+  }
+
+  .wk-tab-2 {
+    width: 16.666667%;
+  }
+
+  .wk-tab-3 {
+    width: 25%;
+  }
+
+  .wk-tab-4 {
+    width: 33.333333%;
+  }
+
+  .wk-tab-5 {
+    width: 41.666667%;
+  }
+
+  .wk-tab-6 {
+    width: 50%;
+  }
+
+  .wk-tab-7 {
+    width: 58.333333%;
+  }
+
+  .wk-tab-8 {
+    width: 66.666667%;
+  }
+
+  .wk-tab-9 {
+    width: 75%;
+  }
+
+  .wk-tab-10 {
+    width: 83.333333%;
+  }
+
+  .wk-tab-11 {
+    width: 91.666667%;
+  }
+
+  .wk-tab-12 {
+    width: 100%;
+  }
+
+}</style>
+        <div class="responsive-container-block inner-container">
+          <p class="text-blk section-head-text">
+            meet the board
+          </p>
+          <p class="text-blk section-subhead-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="responsive-container-block">
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img" src="images/ceo.jpg">
+                </div>
+                <p class="text-blk name">
+                  Ashraf Sami 
+                </p>
+                <p class="text-blk position">
+                  CEO
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="http://www.instagram.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img" src="">
+                </div>
+                <p class="text-blk name">
+                  Sayed Abdelwahed
+                </p>
+                <p class="text-blk position">
+                    CFO
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="http://www.instagram.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                </div>
+                <p class="text-blk name">
+                  Maxwell Doe
+                </p>
+                <p class="text-blk position">
+                  Instructor
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="http://www.instagram.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                </div>
+                <p class="text-blk name">
+                  Maxwell Doe
+                </p>
+                <p class="text-blk position">
+                  Instructor
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="http://www.instagram.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end clients -->
     <!DOCTYPE html>
-    <html lang="en">
+    <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles.css">
-        <title>Client Testimonials</title>
+        <title>News Section</title>
+    
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+    
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Ubuntu:400,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- Client Testimonials -->
-        <section id="testimonial" class="clients py-5">
+    
+        <!-- START NEWS SECTION -->
+        <style>* {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            color: #66696e;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        a,
+        a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .section-news {
+            padding: 80px 0;
+        }
+        
+        .section-news .header-section {
+            margin-bottom: 8px;
+        }
+        
+        .section-news .header-section .small-title {
+            position: relative;
+            text-transform: uppercase;
+          color: #333856;
+          font-size: 20px;
+          font-family: "Ubuntu", sans-serif;
+        }
+        
+        .section-news .header-section .small-title span {
+            display: inline-block;
+            height: 2px;
+            width: 20px;
+            background-color: #fe2782;
+            margin-right: 12px;
+          transform: translateY(-6px);
+        }
+        
+        .section-news .header-section .title {
+            text-transform: uppercase;
+          font-weight: 700;
+          color: #333856;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 50px;
+        }
+        
+        .section-news .single-news {
+            margin-top: 30px;
+            box-shadow: 0 8px 15px 0 rgba(0,0,0,.15);
+        }
+        
+        .section-news .single-news img {
+            width: 100%;
+        }
+        
+        .section-news .single-news .content {
+            padding: 35px;
+        }
+        
+        .section-news .single-news .date {
+          display: inline-block;
+          margin-bottom: 15px;
+          background-color: #000;
+          color: #fff;
+          font-weight: 700;
+          font-size: 15px;
+          padding: 7px 25px;
+        }
+        
+        .section-news .single-news .title {
+            margin-bottom: 12px;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 29px;
+        }
+        
+        .section-news .single-news .title a {
+          text-decoration: none;
+          color: #353857;
+        }
+        
+        .section-news .single-news .text {
+            font-size: 18px;
+        }
+        
+        .section-news .single-news .author {
+            margin-right: 28px;
+        }
+        
+        .section-news .single-news .author,
+        .section-news .single-news .comments {
+            text-transform: uppercase;
+          font-weight: 600;
+          color: #000;
+          font-size: 18px;
+        }
+        
+        @media (max-width: 575.99px) {
+            .section-news .header-section .small-title {
+                font-size: 18px;
+            }
+        
+            .section-news .header-section .small-title span {
+                transform: translateY(-5px);
+            }
+        
+            .section-news .header-section .title {
+                font-size: 32px;
+            }
+        }
+        
+        @media (min-width: 576px) and (max-width: 767.99px) {
+            .section-news .header-section .small-title {
+                font-size: 18px;
+            }
+        
+            .section-news .header-section .small-title span {
+                transform: translateY(-5px);
+            }
+        
+            .section-news .header-section .title {
+                font-size: 32px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991.99px) {
+            .section-news .header-section .title {
+                font-size: 40px;
+            }
+        
+            .section-news .single-news .content {
+                padding: 25px;
+            }
+        
+            .section-news .single-news .title {
+                font-size: 22px;
+            }
+        
+            .section-news .single-news .text {
+                font-size: 16px;
+            }
+        
+            .section-news .single-news .author,
+            .section-news .single-news .comments {
+                font-size: 14px;
+            }
+        
+            .section-news .single-news .author {
+                margin-right: 15px;
+            }
+        }</style>
+        <section class="section-news">
             <div class="container">
-                <div class="row mb-4">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-title">What Our Clients Say</h2>
-                        <p class="section-subtitle">Hear from some of our satisfied customers</p>
-                    </div>
+                <div class="header-section">
+                    <h3 class="small-title"><span></span>Recent News</h3>
+                    <h2 class="title">News & Articles</h2>
                 </div>
-            </div>
-            <div class="clients_red">
-                <div class="container">
-                    <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
-                            <li data-target="#testimonial_slider" data-slide-to="1"></li>
-                            <li data-target="#testimonial_slider" data-slide-to="2"></li>
-                        </ol>
-                        <!-- The slideshow -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="testomonial_section">
-                                    <div class="testimonial_cont text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-3">
-                                                <div class="testimonial_img">
-                                                    <img src="images/tes.jpg" alt="Client" class="rounded-circle shadow"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <div class="testimonial_text">
-                                                    <h3>John Due<br><span class="text-primary">Farm & CO</span></h3>
-                                                    <p><i class="fas fa-quote-left text-primary"></i> Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <i class="fas fa-quote-right text-primary"></i></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testomonial_section">
-                                    <div class="testimonial_cont text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-3">
-                                                <div class="testimonial_img">
-                                                    <img src="images/tes.jpg" alt="Client" class="rounded-circle shadow"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <div class="testimonial_text">
-                                                    <h3>Jane Smith<br><span class="text-primary">Agri Solutions</span></h3>
-                                                    <p><i class="fas fa-quote-left text-primary"></i> Excellent services and products! The team was very supportive and ensured we got the best results in our agricultural operations. Highly recommend! <i class="fas fa-quote-right text-primary"></i></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testomonial_section">
-                                    <div class="testimonial_cont text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-3">
-                                                <div class="testimonial_img">
-                                                    <img src="images/tes.jpg" alt="Client" class="rounded-circle shadow"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <div class="testimonial_text">
-                                                    <h3>Mark Wilson<br><span class="text-primary">Green Fields</span></h3>
-                                                    <p><i class="fas fa-quote-left text-primary"></i> The fertilizer quality has been top-notch, leading to amazing growth for our crops. This company is truly dedicated to helping farmers succeed. <i class="fas fa-quote-right text-primary"></i></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <!-- start single news -->
+                    <div class="col-12 col-md-6">
+                        <div class="single-news">
+                            <a href="#"><img src="https://i.ibb.co/XbnqL9N/post1.jpg" alt=""></a>
+                            <div class="content">
+                                <span class="date">30 NOV 2019</span>
+                                <h3 class="title"><a href="#">Lorem Ipsum is simply dummy text of the printing</a></h3>
+                                <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                <span class="author">By Admin</span>
+                                <span class="comments">0 Comments</span>
                             </div>
                         </div>
-                        <!-- Controls -->
-                        <a class="carousel-control-prev" href="#testimonial_slider" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#testimonial_slider" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
+                    <!-- / end single news -->
+                    <!-- start single news -->
+                    <div class="col-12 col-md-6">
+                        <div class="single-news">
+                            <a href="#"><img src="https://i.ibb.co/CstwX2t/post2.jpg" alt=""></a>
+                            <div class="content">
+                                <span class="date">30 NOV 2019</span>
+                                <h3 class="title"><a href="#">Lorem Ipsum is simply dummy text of the printing</a></h3>
+                                <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                <span class="author">By Admin</span>
+                                <span class="comments">0 Comments</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / end single news -->
                 </div>
             </div>
         </section>
-        <!-- End of Client Testimonials -->
     
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- / END NEWS SECTION -->
     </body>
     </html>
     
