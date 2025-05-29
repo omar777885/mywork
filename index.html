@@ -55,7 +55,7 @@
         
 
         <!-- Navbar -->
-     <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -72,6 +72,7 @@
         body {
             font-family: Arial, sans-serif;
             padding-top: 80px; /* Space for fixed navbar */
+            background-color: #f5f5f5;
         }
         
         /* Navbar Styles */
@@ -109,7 +110,7 @@
         .arabic-title {
             font-weight: bold;
             font-size: 1.2rem;
-            font-family: 'Arial', sans-serif; /* Fallback for Arabic */
+            font-family: 'Arial', sans-serif;
         }
         
         /* Hamburger Menu */
@@ -120,6 +121,7 @@
             width: 30px;
             height: 21px;
             cursor: pointer;
+            position: relative;
         }
         
         .menu-toggle span {
@@ -131,10 +133,24 @@
             transition: all 0.3s ease;
         }
         
+        /* Hamburger animation */
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
         /* Nav Links */
         .nav-links {
             display: flex;
             list-style: none;
+            margin: 0;
         }
         
         .nav-item {
@@ -146,8 +162,10 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            padding: 10px 0;
+            padding: 10px 15px;
+            display: block;
             transition: color 0.3s;
+            cursor: pointer;
         }
         
         .nav-link:hover {
@@ -159,39 +177,53 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #34495e;
-            width: 200px;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+            min-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
             z-index: 1001;
+            border: 1px solid #e0e0e0;
         }
         
         .dropdown-item {
             display: block;
-            padding: 10px 15px;
-            color: white;
+            padding: 12px 20px;
+            color: #333;
             text-decoration: none;
-            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
             transition: background-color 0.3s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
         }
         
         .dropdown-item:hover {
-            background-color: #4CAF50;
+            background-color: #f8f9fa;
+            color: #4CAF50;
         }
         
         .dropdown-toggle::after {
             content: "▼";
-            font-size: 0.6em;
-            margin-left: 5px;
+            font-size: 0.7em;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
         }
         
         /* Show dropdown on hover */
         .nav-item:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .nav-item:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
         }
         
         /* Mobile Styles */
@@ -205,50 +237,98 @@
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background-color: #f8f9fa;
+                height: calc(100vh - 80px);
+                background-color: #fff;
                 flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
+                align-items: flex-start;
+                padding: 20px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                transform: translateY(-150%);
+                transform: translateX(-100%);
                 transition: transform 0.3s ease;
+                overflow-y: auto;
             }
             
             .nav-links.active {
-                transform: translateY(0);
+                transform: translateX(0);
             }
             
             .nav-item {
-                margin: 10px 0;
-                text-align: center;
+                margin: 0;
                 width: 100%;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-link {
+                padding: 15px 20px;
+                width: 100%;
+                font-size: 16px;
             }
             
             .dropdown-menu {
                 position: static;
-                width: 80%;
-                margin: 10px auto 0;
+                width: 100%;
+                margin: 0;
                 opacity: 1;
                 visibility: visible;
+                transform: none;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease;
-                background-color: #e9ecef;
+                background-color: #f8f9fa;
                 box-shadow: none;
+                border: none;
+                border-radius: 0;
             }
             
             .dropdown-item {
-                color: #333;
-                padding-left: 30px;
+                padding: 10px 40px;
+                color: #666;
+                font-size: 14px;
+                border-bottom: 1px solid #e0e0e0;
             }
             
             .dropdown-item:hover {
-                background-color: #dee2e6;
+                background-color: #e9ecef;
+                color: #4CAF50;
             }
             
-            .nav-item:hover .dropdown-menu {
-                max-height: 500px; /* Adjust based on content */
+            .nav-item.dropdown-open .dropdown-menu {
+                max-height: 500px;
             }
+            
+            .dropdown-toggle::after {
+                float: right;
+                margin-top: 2px;
+            }
+            
+            .nav-item.dropdown-open .dropdown-toggle::after {
+                transform: rotate(180deg);
+            }
+        }
+        
+        /* Demo content */
+        .demo-content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .demo-content h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .demo-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -256,7 +336,7 @@
     <nav class="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Universal">
+                <img src="https://via.placeholder.com/60x60/4CAF50/white?text=Logo" alt="Universal">
                 <span class="arabic-title">يونيفرسال الصناعية</span>
             </a>
             
@@ -271,8 +351,8 @@
                     <a class="nav-link" href="footer.html">About Us</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link dropdown-toggle" href="#">Products</a>
+                <li class="nav-item dropdown" id="products-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="products-toggle">Products</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="products.html">N.P.K</a>
                         <a class="dropdown-item" href="soil-amendments.html">Super Phosphate</a>
@@ -298,25 +378,62 @@
             </ul>
         </div>
     </nav>
-
-    <script>
+ <script>
         // Mobile menu toggle functionality
         const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
+        const productsDropdown = document.getElementById('products-dropdown');
+        const productsToggle = document.getElementById('products-toggle');
         
+        // Toggle mobile menu
         mobileMenu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            
-            // Animate hamburger icon
             mobileMenu.classList.toggle('active');
         });
         
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        // Handle dropdown in mobile view
+        productsToggle.addEventListener('click', (e) => {
+            // Only prevent default and toggle dropdown in mobile view
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                productsDropdown.classList.toggle('dropdown-open');
+            }
+        });
+        
+        // Close mobile menu when clicking on regular nav links (not dropdown toggle)
+        document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                productsDropdown.classList.remove('dropdown-open');
             });
+        });
+        
+        // Close mobile menu when clicking on dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                productsDropdown.classList.remove('dropdown-open');
+            });
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                productsDropdown.classList.remove('dropdown-open');
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                productsDropdown.classList.remove('dropdown-open');
+            }
         });
     </script>
 </body>
