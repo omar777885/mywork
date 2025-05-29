@@ -55,63 +55,103 @@
         
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-            <div class="container">
-                <!-- Brand Logo and Title -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="images/logo.png" alt="Universal" style="height: 80px;" class="mr-2">
-                    <span class="arabic-title font-weight-bold" style="font-size: 1.2rem;">يونيفرسال الصناعية</span>
-                </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="footer.html">About Us</a></li>
-                               <style>
-                            .navbar .dropdown-menu {
-                                background-color: #34495e;
-                                border: none;
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                            }
-                            .navbar .dropdown-item {
-                                color: #fff;
-                                font-family: 'Roboto', sans-serif;
-                            }
-                            .navbar .dropdown-item:hover {
-                                background-color: #4CAF50;
-                            }
-                        </style>
-                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Products
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="products.html">N.P.K</a>
-                                                    <a class="dropdown-item" href="soil-amendments.html">Super Phosphate</a>
-                                                    <a class="dropdown-item" href="other-products.html">MAP</a>
-                                                    <a class="dropdown-item" href="other-products.html">amonium nitrate</a>
-                                                    <a class="dropdown-item" href="other-products.html">triple G.S.S.P</a>
-                                                    <a class="dropdown-item" href="other-products.html">Urea</a>
-                                                    <a class="dropdown-item" href="other-products.html">DAP(Di-ammonium phpsphate)</a>
-                                                    <a class="dropdown-item" href="other-products.html">sulpher</a>
-                                                    <a class="dropdown-item" href="other-products.html">amonium Sulphate</a>
-                                                    <a class="dropdown-item" href="other-products.html">Rock Phosphate</a>
-                                                    <a class="dropdown-item" href="other-products.html">magnesiumm sulphate heptahdrate</a>
-
-
-
-
-                                                </div>
-                                            </li>
-                            <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                            <li class="nav-item"><a class="nav-link" href="f.html">Contact Us</a></li>
-                        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <!-- Brand Logo and Title -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.png" alt="Universal" style="height: 80px;" class="mr-2">
+            <span class="arabic-title font-weight-bold" style="font-size: 1.2rem;">يونيفرسال الصناعية</span>
+        </a>
+        
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="footer.html">About Us</a></li>
+                
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="products.html">N.P.K</a>
+                        <a class="dropdown-item" href="soil-amendments.html">Super Phosphate</a>
+                        <a class="dropdown-item" href="other-products.html">MAP</a>
+                        <a class="dropdown-item" href="other-products.html">Ammonium Nitrate</a>
+                        <a class="dropdown-item" href="other-products.html">Triple G.S.S.P</a>
+                        <a class="dropdown-item" href="other-products.html">Urea</a>
+                        <a class="dropdown-item" href="other-products.html">DAP (Di-ammonium Phosphate)</a>
+                        <a class="dropdown-item" href="other-products.html">Sulphur</a>
+                        <a class="dropdown-item" href="other-products.html">Ammonium Sulphate</a>
+                        <a class="dropdown-item" href="other-products.html">Rock Phosphate</a>
+                        <a class="dropdown-item" href="other-products.html">Magnesium Sulphate Heptahydrate</a>
                     </div>
-                </div>
-            </nav>
-        </header>
+                </li>
+                
+                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="f.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Navbar Dropdown Styles */
+    .navbar .dropdown-menu {
+        background-color: #34495e;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
     
+    .navbar .dropdown-item {
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .navbar .dropdown-item:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    /* Mobile Menu Specific Styles */
+    @media (max-width: 992px) {
+        .navbar-collapse {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown-menu {
+            position: static !important;
+            transform: none !important;
+            margin-left: 1rem;
+            width: calc(100% - 2rem);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-item {
+            padding-left: 2rem !important;
+        }
+    }
+    
+    /* Navbar Brand Styles */
+    .arabic-title {
+        font-family: 'Cairo', sans-serif;
+    }
+</style>
+
+<!-- Required Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- Slider Section -->
         <section class="slider_section">
             <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
